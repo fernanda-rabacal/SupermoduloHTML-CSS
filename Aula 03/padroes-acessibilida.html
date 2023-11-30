@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input:focus {
+      /* shorthand */
+      outline: 2px solid gray;
+    }
+
+    .modal {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.564);
+    }
+  </style>
+</head>
+<body>
+  <p>
+    Visibilidade de foco - Todo elemento interativo precisa ter algum feedback visual de que aquele elemento está em foco
+    Este feedback visual pode ser um outline, um border, box-shadow
+  </p>
+  <div>
+    <p>Tab - O site também precisa ser totalmente navegável pela tecla tab</p>
+    <!-- não coloque tabindex positivo pois quebra o fluxo natural de navegação do proprio navegador -->
+    
+    <input type="text" />
+    <input  />
+    <input  />
+  
+    <div tabindex="0">Esta div faz parte do fluxo de navegaçao por conta do tabindex="0"</div>
+    <div tabindex="-1">Esta div não faz parte do fluxo de navegaçao natural mas pode receber foco pelo javascript</div>
+  
+    <div>
+      <h2>Qual o sabor da sua pizza</h2>
+      <label for="calabresa">
+        Calabresa
+      </label>
+      <input id="calabresa" type="radio" value="calabresa" name="sabor"/>
+  
+  
+      <input type="radio" name="sabor" />
+      <input type="radio" name="sabor" />
+      <input type="radio" name="sabor" />
+    </div>
+  </div>
+  <div>
+    <p>Tamanho de elementos interativos - os elementos interativos devem ter um tamanho ideal para o usuario não ter dificuldades. O tamanho minimo de largura é 44px</p>
+    <p>Elementos interativos também tenham uma distancia ideal</p>
+    <div>
+      <!--  class="modal" -->
+      <!-- exemplo de modal -->
+      <form style="background-color: aliceblue;">
+        <p>Tem certeza de que quer deletar este elemento?</p>
+        <button style="width: 44px;">Ok</button> 
+        <button>Cancelar</button>
+      </form>
+    </div>
+  </div>
+  <div>
+    <p>Animações no site não devem piscar mais de três vezes por segundo. Se tiver alguma animação de flash, permita que o usuario possa desligar a animação. Se tiver algum som no seu site, inicialize baixo ou mutado e permita que p usuario possa delsigar também</p>
+  </div>
+  <div>
+    <p>Caracteristicas sensoriais como unica maneira de transmitir algo</p>
+    <p>Paleta de cores permitida para daltônicos</p>
+    <div>
+      <!-- easter egg - tipos de display -->
+      <!-- display block cria um bloco inteiro para o elemento podendo ser redimensionado como width e height -->
+      <!-- display inline - ele não pode ser redimensionado com largura e altura -->
+      <!-- display inline-block continua deixando os elementos em linha mas permite redimensionamento -->
+      <span style="width: 10px; height: 10px; background-color: rgb(0, 255, 51); display: inline-block;">
+        <img src="./check-mark.png" style="width: 100%;" alt="icone de check"/>
+      </span>
+      <span>Feita</span>
+      <span style="width: 10px; height: 10px; background-color: red; display: inline-block;"></span>
+      <span>Fora do prazo</span>
+    </div>
+
+    <div style="background-color: rgb(0, 255, 38);">
+      <p>Tarefa 1</p>
+      <img src="./check-mark.png" alt="icone de check"/>
+    </div>
+    <div style="background-color: red;">
+      <p>Tarefa 1</p>
+    </div>
+  </div>
+  <div style="background-color: rgb(0, 75, 0)"> 
+    <p>Contraste ideal entre cores de fundo e cores de texto</p>
+  </div>
+</body>
+</html>

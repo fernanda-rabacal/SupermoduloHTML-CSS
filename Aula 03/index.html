@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      input:focus {
+        outline: 1px solid gray;
+      }
+  </style>
+</head>
+<body>
+  <input />
+
+  <div data-message="Esse é do primeiro botão" tabindex="0" role="link">Clique em mim!</div>
+<div data-message="Esse é do segundo botão" tabindex="0">
+  Clique em mim também!
+</div>
+<div data-message="Esse é do terceiro botão" tabindex="0">E em mim!</div>
+
+<p>
+  i have a set of programmable tab links like <a href="#">This link</a>,
+  then i have a second link like so <a href="#">This second link</a>,
+  and i need a third link to test my theory, like <a href="#">this link right here</a>
+</p>
+
+<input type="radio" name="teste" />
+<input type="radio" name="teste" />
+<input type="radio" name="teste" />
+<input type="radio" name="teste" />
+<input type="radio" name="teste" />
+
+<select>
+  <option selected aria-selected="true">Teste 1</option>
+  <option aria-selected="false">Teste 2</option>
+  <option>Teste 3</option>
+  <option>Teste 4</option>
+</select>
+
+<div
+  id="alert_dialog"
+  role="alertdialog"
+  aria-modal="true"
+  aria-labelledby="dialog_label"
+  aria-describedby="dialog_desc">
+  <h2 id="dialog_label">Confirmation</h2>
+  <div id="dialog_desc">
+    <p>VocÊ tem certeza de que deseja apagar a tarefa?</p>
+    <p>Essa mudança não pode ser desfeita.</p>
+  </div>
+  <ul>
+    <li>
+      <button type="button" onclick="closeThis()">No</button>
+    </li>
+    <li>
+      <button
+        translate="no"
+        type="button"
+        aria-controls="form"
+        id="delete_file_confirm"
+        onclick="deleteFile()">
+        Yes
+      </button>
+    </li>
+  </ul>
+</div>
+
+<div
+  contenteditable
+  role="textbox"
+  aria-labelledby="date-of-birth"
+  aria-placeholder="MM-DD-YYYY">
+  
+</div>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* outline: none; */
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(0, 134, 91)
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    } 
+    img {
+      width: 15px;
+    }
+
+    ul a {
+      /* mudar a cor do texto para ter um melhor contraste de leitura */
+      color: white;
+    }
+
+    main {
+      padding: 0 4rem;
+      flex: 1;
+    }
+
+    main h1 {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    #dados {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    #dados #legendas {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    #dados #legendas div {
+      display: flex;
+      gap: 0.3rem;
+    }
+
+    #dados #legendas span {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+    }
+    
+    #dados .atrasada {
+      background-color: red;
+    }
+
+    #dados .perto_do_prazo {
+      background-color: rgb(255, 223, 45);
+    }
+
+    #dados .feita {
+      background-color: rgb(1, 136, 12);
+    }
+
+    #tarefas {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    #tarefas .tarefa {
+      width: 45%;
+      height: 15rem;
+      border-radius: 5px;
+      box-shadow: 0 0 5px gray;
+    }
+
+    .tarefa h4 {
+      padding: 0.4rem;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .tarefa p {
+      color: rgb(36, 36, 36);
+    }
+    
+    .tarefa.atrasada h4 {
+      background-color: red;
+    }
+
+    .tarefa.perto_do_prazo h4 {
+      background-color: rgb(255, 212, 104);
+    }
+
+    .tarefa.feita h4 {
+      background-color: rgb(6, 115, 0);
+    }
+
+    #nova_tarefa {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.505);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #nova_tarefa form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 2rem;
+      background-color: aliceblue;
+      border-radius: 10px;
+      box-shadow: 0 0 5px gray;
+    }
+
+    #nova_tarefa .fechar-modal button {
+      margin-left: auto;
+    }
+
+    #search div {
+      position: relative;
+    }
+
+    #search div img {
+      width: 1rem;
+      position: absolute;
+      left: 0.3rem;
+      top: 20%
+    }
+
+    #search input {
+      padding: 0.2rem;
+      padding-left: 1.5rem;
+      width: 15rem;
+    }
+
+    footer {
+      padding: 1rem;
+      background-color: rgb(0, 194, 133);
+    }
+
+  </style>
+  <title>Cadastro</title>
+</head>
+<body>
+  <header>
+    <form id="search" role="search">
+      <div>
+        <img src="./lupa.png" alt="icone de lupa" />
+        <input type="search" aria-label="Pesquisa de tarefas do site"/>
+      </div>
+    </form>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Teste</a>
+        </li>
+        <li>
+          <a href="#">Teste</a>
+        </li>
+        <li>
+          <a href="#">Teste</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Dashboard Tarefas</h1>
+    <section id="dados">
+      <div id="legendas">
+        <div>
+          <span class="atrasada">
+            <img src="./atencao.png" alt="icone de atenção"/>
+          </span>
+          <p>Atrasada</p>
+        </div>
+        <div>
+          <span class="perto_do_prazo">
+            <img src="./relogio.png" alt=""/>
+          </span>
+          <p>Perto do prazo</p>
+        </div>
+        <div>
+          <span class="feita">
+            <!-- a mesma img para a label de cada tarefa -->
+            <img src="./relogio.png" alt=""/>
+          </span>
+          <p>Feita</p>
+        </div>
+      </div>
+      <button aria-expanded="false"
+      title="Abrir formulário de tarefa" 
+      aria-label="abrir o formulário de adição de tarefa"
+      aria-controls="nova_tarefa" id="abrir_modal_btn">
+        <!-- aumentar o botão para questão acessibilidade -->
+        +
+      </button>
+
+      <div id="nova_tarefa" aria-modal="true" role="alertdialog">
+        <form>
+          <div class="fechar-modal">
+            <button 
+              title="fechar formulário"
+              aria-label="fechar modal"
+              aria-expanded="true" 
+              id="fechar_modal_btn">
+              X
+            </button>
+          </div>
+          <div>
+            <label for="nome">Nome da tarefa</label>
+            <input id="nome" placeholder="Nome da tarefa" required aria-required="true" />
+          </div>
+          <div>
+            <label for="descricao">Descrição</label>
+            <input id="descricao" placeholder="Descrição da tarefa" required aria-required="true"/>
+          </div>
+          <div>
+            <label for="prazo">Prazo da tarefa</label>
+            <input id="prazo" type="datetime-local" required aria-required="true" />
+          </div>
+          <button>Cadastrar nova tarefa</button>
+        </form>
+      </div>
+    </section>
+    <section id="tarefas">
+      <div class="tarefa atrasada">
+        <h4>Teste de tarefa 1</h4>
+        <time datetime="2023-05-15 19:00">15 de maio - 19:00</time>
+        <p id="descricao_tarefa_1">Descrição da tarefa 1 - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum explicabo ab omnis, excepturi numquam tempora architecto, autem aut eum quos sapiente ratione non dolorem eaque sint asperiores deleniti porro similique.</p>
+      </div>
+      <div class="tarefa atrasada">
+        <h4 aria-describedby="descricao_tarefa_2">Teste de tarefa 2</h4>
+        <time datetime="2023-05-15 19:00">15 de maio - 19:00</time>
+        <p id="descricao_tarefa_2">Descrição da tarefa 2 - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, error debitis doloremque nemo ipsam ea est voluptatibus praesentium ducimus corporis et dolorem quaerat quasi minima fugiat sapiente eos, deleniti provident!</p>
+      </div>
+      <div class="tarefa feita">
+        <h4>Teste de tarefa 3</h4>
+        <time datetime="2023-05-15 19:00">15 de maio - 19:00</time>
+        <p id="descricao_tarefa_3">Descrição da tarefa 3 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum autem fuga magni maiores deserunt ex assumenda, dolores voluptatibus accusamus labore incidunt placeat tenetur sunt ad, in repellat fugiat qui? Veritatis?</p>
+      </div>
+      <div class="tarefa perto_do_prazo">
+        <h4>Teste de tarefa 4</h4>
+        <time datetime="2023-05-15 19:00">15 de maio - 19:00</time>
+        <p id="descricao_tarefa_4">Descrição da tarefa 4 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quam, iste nam nostrum illo sunt perferendis ullam quibusdam ad veritatis laudantium laboriosam unde provident, ut labore cum! Recusandae, ea enim.</p>
+      </div>
+      <div class="tarefa perto_do_prazo">
+        <h4>Teste de tarefa 5</h4>
+        <time datetime="2023-05-15 19:00">15 de maio - 19:00</time>
+        <p id="descricao_tarefa_5">Descrição da tarefa 5 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, consequuntur praesentium dicta sed voluptas repudiandae numquam dolorum deleniti unde ipsa pariatur possimus dolor amet explicabo? Perspiciatis, eligendi. Blanditiis, cupiditate at.</p>
+      </div>
+      <div class="tarefa atrasada">
+        <h4>Teste de tarefa 6</h4>
+        <time datetime="2023-05-15 19:00">15 de maio - 19:00</time>
+        <p id="descricao_tarefa_6">Descrição da tarefa 6 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt nobis dolor, porro, adipisci voluptates aliquid delectus et voluptatum dolore ipsa maxime? Nemo itaque inventore nesciunt necessitatibus. Sunt id ullam qui.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; Tarefas 2023, Todos os direitos reservados
+  </footer>
+
+  <script>
+    const abrirModalBtn = document.querySelector("#abrir_modal_btn")
+    const fecharModalBtn = document.querySelector("#fechar_modal_btn")
+    const modal = document.querySelector("#nova_tarefa")
+
+    abrirModalBtn.addEventListener("click", () => modal.style.display = 'flex')
+    fecharModalBtn.addEventListener("click", () => modal.style.display = 'none')
+  </script>
+</body>
+</html>

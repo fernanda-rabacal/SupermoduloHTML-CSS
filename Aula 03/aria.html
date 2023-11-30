@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>WAI-ARIA - Atributos de Acessibilidade para tecnologias assistidas (leitores de tela)</p>
+
+  <div>
+
+    <p>Atributo role - indica a funcionalidade daquela tag quando ela estiver fazendo um papel diferente do natural dela. Até a surgimento do html semantico a organização do código de forma acessível era feito por role</p>
+    <div role="banner"> <!-- substitui por um header -->
+      <p role="heading">Titulo</p> <!-- substitui pelas tags normais de titulo -->
+  
+      <div role="list"> <!-- substitui por uma ul, ol, ou menu -->
+        <a href="#" role="listitem">teste</a>
+        <a href="#">teste</a>
+        <a href="#">teste</a>
+        <a href="#">teste</a>
+      </div>
+    </div>
+  
+    <p>Alguns roles ainda são utilizados dependendo da situação</p>
+    <a href="#" role="button" style="background-color: blue; color: aliceblue; text-decoration: none; padding: 0.5rem;">Clique para ir ao github</a>
+  
+    <form role="search">
+      <!-- indica que este formulário é feito para pesquisa -->
+      <input type="search" aria-label="Pesquisa pelos links do nosso site" />
+    </form>
+  </div>
+  <div>
+    <p>Atributos aria</p>
+
+    <input type="hidden" aria-hidden="true"/>
+
+    <div aria-describedby="decricao_sherlock">
+      <p>Sherlock Holmes</p>
+    </div>
+
+    <div id="decricao_sherlock">
+      <p>Sherlock holmes é um personagem de um detetive que investiga coisas na inglaterra do sec. XX </p>
+    </div>
+
+    <form>
+      <input placeholder="Digite seu nome" required aria-required="true" />
+      <input placeholder="Digite seu nome" readonly aria-readonly="true" />
+      <input placeholder="Digite seu nome" disabled aria-disabled="true" />
+    </form>
+    
+    <button aria-expanded="false" aria-controls="modal"> abrir o menu</button>
+    <!--  -->
+    
+    <div id="modal" class="modal" aria-modal="true">
+      <button aria-expanded="true">Fechar o menu</button>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">links de menu 1</a>
+            <a href="#">links de menu 2</a>
+            <a href="#">links de menu 3</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div role="alert">
+      <!-- um alerta para o usuario -->
+      <p>Você foi cadastrado com sucesso!!</p>
+    </div>
+    <div role="alertdialog">
+      <!-- um alertdialog precisa ser um modal -->
+      <p>Voce tem certeza de que quer apagar seu usuário?</p>
+      <button>Sim</button>
+      <button>Não</button>
+    </div>
+  </div>
+
+  <div id="tarefas" aria-live="polite" aria-relevant="all">
+    <!-- esta div vai sendo atualizada com novas tarefas depois do carregamento da pagina, alimentando ela pelo javascript por exemplo -->
+  </div>
+
+  <script>
+    alert("Teste")
+  </script>
+
+  
+</body>
+</html>
