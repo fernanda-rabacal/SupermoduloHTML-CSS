@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display flex</title>
+  <style>
+    body {
+      height: 500px;
+      /* transforma o elemento em um container flexivel unidimensional */
+      display: flex;
+      /* Indica se os elementos vão ser alinhados por linha ou coluna */
+      flex-direction: row;
+
+      /* alinha os elementos no eixo principal indicado pelo flex-direction */
+      justify-content: center;
+
+      /* alinha os elementos no eixo contrário ao indicado no flex-direction */
+      align-items: center;
+
+      /* espaçamento entre os elementos */
+      gap: 20px;
+
+      /* indica se os elementos devem quebrar a linha caso tenha mais filhos do que
+      o tamanho do container */
+      flex-wrap: wrap;
+    }
+
+    div {
+      /* width: 100px;
+      height: 100px; */
+    }
+
+    .um {
+      background-color: green;
+    }
+
+    .dois {
+      background-color: red;
+    }
+
+    .tres {
+      background-color: blue;
+    }
+
+    .filha {
+      background-color: blueviolet;
+      width: 50px;
+      height: 50px;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .card {
+      border: 1px solid gray;
+      border-radius: 5px;
+      width: 200px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+    }
+  </style>
+</head>
+<body>
+  <!-- <div class="um">
+    <div class="filha"></div>
+  </div>
+  <div class="dois"></div>
+  <div class="tres"></div> -->
+
+  <div class="cards">
+    <div class="card">
+      <div>
+        <h2>Titulo</h2>
+        <p>Descrição do card</p>
+      </div>
+      <div>
+        <button>Editar card</button>
+        <button>Deletar card</button>
+      </div>
+    </div>
+    <div class="card">
+      <div>
+        <h2>Titulo</h2>
+        <p>Descrição do card</p>
+      </div>
+      <div>
+        <button>Editar card</button>
+        <button>Deletar card</button>
+      </div>
+    </div>
+    <div class="card">
+      <div>
+        <h2>Titulo</h2>
+        <p>Descrição do card</p>
+      </div>
+      <div>
+        <button>Editar card</button>
+        <button>Deletar card</button>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    
+    <main></main>
+    <aside></aside>
+  </div>
+</body>
+</html>

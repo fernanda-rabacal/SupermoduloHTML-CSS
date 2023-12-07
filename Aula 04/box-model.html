@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* seletor universal, capta todas as tags e não possui espeficidade */
+    * {
+      margin: 0; /* espaçamento externo do elemento */
+      padding: 0; /* espaçamento interno do elemento */
+      box-sizing: border-box; /* indica se o elemento deve contar o tamanho
+      seguindo o conteúdo ou a borda.
+      Pelo conteúdo, o padding do elemento é somado ao tamanho total dele
+      Pela borda, o padding esmaga o conteudo se o elemento possuir uma largura fixa
+       */
+    }
+
+    div {
+      border: 1px solid black;
+      width: 100px;
+      /* margin: 10px 5px 40px 30px; */
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    toda tag tem um modelo de caixa
+  </div>
+</body>
+</html>

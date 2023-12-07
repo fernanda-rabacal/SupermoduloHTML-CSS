@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: grid;
+      /* transforma o container em um display de grade */
+      height: 500px;
+      grid-template-columns: 50px 50px 50px;
+      /* grid-template-columns serve para criar templates de coluna na grade. Cada tamanho 
+      especificado cria uma coluna automaticamente na grade. A unidade 'fr' indica uma fração
+      de tamanho do container. 
+      Por exemplo ->   grid-template-columns: 1fr 1fr 1fr 
+      cria três colunas com frações iguais do tamanho do container */
+      grid-template-rows: 10vh 50px 40px;
+      /* serve para a msm coisa do grid-template-columns mas criando linhas. Se existirem filhos a mais
+      que ultrapassem a quantidade de linhas especificadas, o grid cria linhas novas automaticamente */
+      
+      /* gap: 40px; espaçamento entre as linhas e as colunas */
+
+      justify-content: end; /* alinha o grid inteiro no eixo x do container. 
+      Não funciona se o grid ter exatamente o msm tamanho de espaço do container. ex: grid com colunas indicadas com 1fr
+       */
+      align-content: center;
+      /* mesma coisa do justify-content mas no eixo y (vertical) */
+
+      justify-items: stretch;
+      align-items: stretch;
+      /* alinha o elemento em relacao à célula da grade */
+
+      column-gap: 50px; /* espaçamento entre colunas */
+      row-gap: 10px; /* espaçamento entre linhas */
+
+    }
+
+    .um {
+      background-color: blue;
+      /* grid-column: 2 / 4; */
+      /* shorthand para grid-column-start e grid-column-end 
+       Você pode indicar em qual coluna o elemento começa e ate qual coluna ele para, 
+       valores separados por barra. Se quiser que o elemento ocupe até a coluna 3,
+       especifique o final 4 pois ai ele vai até "o inicio" da coluna 4 (mesmo se essa coluna 4 não existir)
+
+      */
+
+      grid-column: span 3;
+      /* Você pode também pedir para expansionar o elemento para ocupar 2 colunas ou mais com a palavra span
+      e a quantidade desejada */
+    }
+
+    .dois {
+      background-color: red;
+      /* width: 30px; */
+      grid-row: span 2;
+      /* mesma coisa do grid-column mas para linha */
+    }
+
+    .tres {
+      background-color: green;
+    }
+
+    .quatro {
+      background-color: brown;
+    }
+  </style>
+</head>
+<body>
+  <div class="um">teste 1</div>
+  <div class="dois">teste 2</div>
+  <div class="tres">teste 3</div>
+  <div class="quatro">teste 4</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 25% 50% 25%;
+      grid-template-rows: 10vh 1fr 5vh;
+
+      /* Esta propriedade permite que você crie áreas para o seu grid,
+      indicando posteriormente para cada elemento desejado qual a área que ele 
+      vai ocupar. Cada conteudo entre aspas cria uma linha, cada nome cria uma área específica
+      e cada espaço entre os nomes cria uma coluna 
+      O elemento cuja área seja header vai ocupar tres colunas e a linha inteira por exemplo
+      Os nomes podem ser qualquer coisa, inclusive apenas letras A ou B ou C, etc. */
+      grid-template-areas: "header header header" 
+                           "lateral main aside"
+                           "footer footer footer";
+    }
+
+    header {
+      /* grid-area indica para cada elemento qual a área que ele deve ocupar */
+      grid-area: header;
+      background-color: aqua;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    footer {
+      background-color: blue;
+      grid-area: footer;
+    }
+
+    main {
+      background-color: chocolate;
+      grid-area: main;
+    }
+
+    .lateral-direito {
+      background-color: fuchsia;
+      grid-area: aside;
+    }
+
+    .lateral-esquerdo {
+      grid-area: lateral;
+      display: grid;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <header>Este é o Header</header>
+  <aside class="lateral-esquerdo">
+    <div>elemento 1</div>
+    <div>elemento 2</div>
+  </aside>
+  <main>Aqui está o main</main>
+  <aside class="lateral-direito">Aside</aside>
+  <footer>
+    footer
+  </footer>
+</body>
+</html>

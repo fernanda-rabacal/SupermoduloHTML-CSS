@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      /* seletor de tag, possui a menor especificidade, 1 */
+    }
+
+    .teste {
+      background-color: brown;
+      /* seletor de classe, possui especificidade maior do que o seletor de tag
+      terá preferencia na aplicação da propriedade no elemento caso a propriedade se repita 
+      no seletor de tag, independente da cascata */
+    }
+
+    #teste {
+      /* seletor de id, mair especificade entre os seletores simples */
+    }
+
+    /* seletor composto de vários seletores ao msm tempo */
+    div, .teste, #teste {
+
+    }
+
+
+    .teste header p {
+      /* seletor de filhos indiretos */
+    }
+    
+    .teste > p {
+      color: blue;
+
+      /* seletor de filhos diretos, só capta o p se ele for diretamente filho de div */
+    }
+
+    h1 ~ p {
+/* seletor de adjacentes indiretos, capta todas as p após o h1 msm que tenha outras tags no meio deles */
+    }
+
+    h1 + p {
+      /* seletor de adjacentes diretos, só capta p que venha logo após um h1 */
+    }
+
+    input:checked + p {
+      /* exemplo de uso de um seletor de adjacente direto */
+      color: gray;
+      text-decoration: line-through;
+    }
+
+    /* input::placeholder
+
+    html::-webkit-scrollbar */
+
+    p::before {
+      content: "teste";
+      /* pseudo elemento de antes */
+    }
+    p::after {
+      content: "teste";
+      /* pseudo elemento criado depois do p */
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input type="checkbox" />
+    <p>Tarefa tal</p>
+  </div>
+  <div class="teste id">
+    <header>
+      <p>lorem ipsum</p>
+    </header>
+  </div>
+  <div class="teste id"></div>
+  <div id="teste"></div>
+
+  <h1>
+    titulo
+  </h1>
+  <a>link</a>
+  <p>lorem ipsum</p>
+  <p>lorem ipsum</p>
+  <p>lorem ipsum</p>
+  
+</body>
+</html>
