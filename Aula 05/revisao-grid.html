@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: grid;
+      /* grid-template-columns: 25% 50% 25%; */
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 10vh 300px 300px 150px 150px;
+      grid-template-areas: "header header header"
+                            "hero hero hero"
+                            "menu main main"
+                            "menu banner banner"
+                            "menu extra imagem";
+    }
+
+    header {
+      background-color: rgb(0, 0, 84);
+      grid-area: header;
+    }
+
+    .hero {
+      background-color: rgb(0, 119, 255);
+      grid-area: hero;
+    }
+
+   /*  header, .hero {
+      grid-column: span 3;
+    }  */
+
+    aside {
+      background-color: red;
+      grid-area: menu;
+     /*  grid-row: span 3; */
+    }
+
+    main {
+      background-color: blueviolet;
+      grid-area: main;
+    }
+
+    .banner {
+      background-color: yellow;
+      grid-area: banner;
+    }
+
+   /*  main, .banner {
+      grid-column: span 2;
+    } */
+  </style>
+</head>
+<body>
+  <header>
+    Header
+  </header>
+  <section class="hero">
+    Hero - Banner da empresa
+  </section>
+  <aside>
+    Menu
+  </aside>
+  <main>
+    Main
+  </main>
+  <section class="banner">
+    Banner
+  </section>
+  <section>
+    Extra
+  </section>
+  <section>
+    Imagem
+  </section>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 400px;
+      height: 400px;
+      background-color: blue;
+      margin: 80px;
+      transition: 0.5s;
+     /*  transform: translateX(50%) translateY(30px) translateZ(30px); */
+      /* Transform recebe algumas funções de transformação do elemento e pode receber mais de uma função ao mesmo tempo */
+      /* translate movimenta o elemento no eixo X e Y
+      um valor movimenta apenas no eixo X e dois valores separados por virgula movimenta no X e o Y, respectivamente */
+    }
+
+    .animation {
+      transform: rotate(180deg);
+    }
+    
+    div:hover {
+      /* transform: scale(1.07); */
+      /* scale muda a dimensão do elemento. Um valor 1 é o padrão, abaixo de um o elemento diminui, acima de 1 ele aumenta. Um valor só aumenta no eixo X e no eixo Y */
+      
+      /* transform: rotateZ(180deg); */
+      /* rotaciona o elemento no eixo Z, possui rotações no eixo x e y também */
+
+     /*  transform: perspective(500px) translate3d(30px, 30px, 30px) rotate(180deg); */
+
+      /* perspective cria uma distancia no plano Z. Utilizada quando alguma propriedade 3d precisa da distancia do eixo Z para funcionar */
+
+      /* translate3d recebe tres valores para a movimentação no eixo X, Y e Z, respectivamente */
+    }
+  </style>
+</head>
+<body>
+  <div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At vel quas laboriosam modi officia ut fugit, eaque consequuntur, voluptatum aliquam corrupti eum molestiae! Iure nam nobis cupiditate laboriosam recusandae natus.
+  </div>
+
+  <script>
+    const div = document.querySelector("div")
+
+    div.addEventListener('click', () => div.classList.add("animation"))
+    
+  </script>
+</body>
+</html>

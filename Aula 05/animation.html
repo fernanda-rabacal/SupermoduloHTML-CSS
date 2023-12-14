@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      margin-bottom: 2rem;
+      animation: change-background 4s linear infinite;
+    }
+
+   /*  .um {
+      animation-timing-function: linear;
+    }
+
+    .dois {
+      animation-timing-function: ease;
+    }
+
+    .tres {
+      animation-timing-function: ease-in;
+    }
+
+    .quatro {
+      animation-timing-function: ease-in-out;
+    }
+
+    .cinco {
+      animation-timing-function: ease-out;
+    } */
+
+    @keyframes change-background {
+      from {
+        transform: translate(100%);
+      } 
+
+      50% {
+        transform: rotate(180deg);
+      }
+      
+      to {
+        transform: rotate(360deg);
+      }
+
+      /* 0% {
+        background-color: aqua;
+        transform: translate(0, 0);
+      }
+
+      25% {
+        background-color: blue;
+        transform: translate(500px, 0);
+      }
+
+      50% {
+        background-color: purple;
+        transform: translate(500px, 500px);
+      }
+
+      75% {
+        background-color: crimson;
+        transform: translate(0, 500px);
+      }
+
+      100% {
+        background-color: aqua;
+        transform: translate(0, 0);
+      } */
+    }
+  </style>
+</head>
+<body>
+  <div class="um"></div><!-- 
+  <div class="dois"></div>
+  <div class="tres"></div>
+  <div class="quatro"></div>
+  <div class="cinco"></div> -->
+  <canvas></canvas>
+</body>
+</html>

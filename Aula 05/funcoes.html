@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --blue-primary: #4470ff;
+      --width-container: 90%
+      /* uma variárel é sempre criada no root, utilizando dois traços no inicio do nome
+      
+      O nome você escolhe e a variável pode guardar qualquer tipo de valor, espaçamentos, tamanhos de fonte, familias de fonte e cores*/
+    }
+
+    div {
+      /* width: min(50%, 300px); */
+      /* a função min serve para passar dois valores 
+      e ele sempre vai escolher o menor */
+      
+      /* width: max(50%, 300px); */
+      /* a função min serve para passar dois valores 
+      e ele sempre vai escolher o maior */
+
+      /* grid-template-columns: repeat(12, 1fr); */
+      /* repeat é uma função que repete o valor quantas vezes você precisar */
+      
+      height: 100px;
+    }
+
+    header {
+      background-color: var(--blue-primary);
+      /* var é uma função que lê o valor de uma variável criada no root */
+    }
+    
+    footer {
+      background-color: var(--blue-primary);
+    }
+
+    .um {
+      background-color: red;
+    }
+    .dois {
+      background-color: rgb(17, 0, 255);
+    }
+    .tres {
+      background-color: rgb(72, 255, 0);
+      /* position: relative; */
+    }
+
+    /* .filha {
+      width: 300px;
+      height: 300px;
+      background-color: blueviolet;
+      position: absolute;
+      top: calc(50% - 150px);
+      calc permite fazer um calculo matametico simples 
+    } */
+  </style>
+</head>
+<body>
+ <header>
+  header
+ </header>
+ <main>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sequi harum magnam quisquam aut vitae eaque, in optio enim, ex amet animi molestias, voluptatibus commodi perferendis modi a aliquam dolor.</p>
+  <span>Teste de span</span>
+ </main>
+ <aside>
+  aside
+ </aside>
+ <footer>
+  <p>Teste do paragrafo</p>
+ </footer>
+</body>
+</html>

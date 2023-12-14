@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 10vh 1fr;
+      column-gap: 1.5rem;
+      row-gap: 1rem;
+      background-color: black;
+    }
+
+    .div1 {
+      background-color: orange;
+    }
+
+    .div2 {
+      background-color: rgb(138, 255, 114);
+    }
+
+    .sec1 {
+      background-color: red;
+    }
+
+    .sec2 {
+      background-color: green;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    .sec2 .um {
+      background-color: blue;
+      grid-column: span 2;
+    }
+
+    .sec2 .dois {
+      background-color: purple;
+    }
+    .sec2 .tres {
+      background-color: orange;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="div1">Larajna</div>
+  <div class="div2">Verde</div>
+  <section class="sec1">Vermelha</section>
+
+  <section class="sec2">
+    <div class="um">Verde</div>
+    <div class="dois">Verde escura</div>
+    <div class="tres">laranja</div>
+  </section>
+  
+</body>
+</html>
