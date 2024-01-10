@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Programação</title>
+</head>
+<body>
+  <nav id="navigation">
+    <div class="wrapper">
+      <a href="#" class="logo">Dev.prog</a>
+      
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="#home">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about">
+              Sobre
+            </a>
+          </li>
+          <li>
+            <a href="#testimonials">
+              Depoimentos
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              Contato
+            </a>
+          </li>
+          <li>
+            <a href="#questions">
+              Duvidas
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <button 
+        aria-expanded="false"
+        aria-label="Abrir menu"
+        onclick="openMenu()" 
+        class="open-menu"> 
+          <img src="./assets/open-button.svg" />
+        </button>
+        <button 
+        aria-expanded="true"
+        aria-label="Fechar menu"
+        onclick="closeMenu()" 
+        class="close-menu" >
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>            
+        </button>
+    </div>
+  </nav>
+  <main>
+    <section id="home">
+      <div class="wrapper">
+        <div>
+          <header>
+            <h1>Dev.prog</h1>
+            <h2>Seu sonho completo do Júnior ao Especialista</h2>
+          </header>
+          <div class="content">
+            <p>
+              Bem-vindo à Dev.prog, sua porta de entrada para o mundo fascinante da programação e desenvolvimento de software! Fundada em 2020, nossa empresa nasceu da paixão por transformar vidas por meio do conhecimento tecnológico. A Dev.prog é mais do que uma escola de programação; somos uma comunidade dedicada a capacitar indivíduos a construir um futuro brilhante na era digital.</p>
+  
+            <button class="button">Fale conosco</button>
+          </div>
+        </div>
+        <img
+          src="../11436094_4707119.svg"
+          alt="Gatos e cachorros olhando para a tela de um angulo acima"
+        />
+      </div>
+    </section>
+    <section id="about">
+      <div class="wrapper">
+        <header>
+          <h1>SOBRE NÓS</h1>
+          <h4>O que oferecemos</h4>
+        </header>
+        <div class="our-history">
+          <p>
+            Na Dev.prog, oferecemos uma ampla gama de cursos de programação, desde os fundamentos até tópicos avançados. Se você é um iniciante procurando entender os conceitos básicos ou um profissional experiente buscando aprimorar suas habilidades, temos o curso certo para você. Nossos cursos abrangem linguagens de programação populares, frameworks e tecnologias emergentes.
+            <br><br>
+            Nossos cursos são projetados para serem envolventes, práticos e relevantes. Adotamos uma abordagem prática, proporcionando aos alunos a oportunidade de aplicar seus conhecimentos em projetos do mundo real desde o início. Acreditamos que a melhor maneira de aprender é fazendo, e nossos instrutores são profissionais experientes que guiarão você em cada passo do caminho.
+          </p>
+
+          <iframe height="315" src="https://www.youtube.com/embed/watch?v=KKO84c6SbfY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <section id="courses">
+      <div class="wrapper">
+        <header>
+          <h2>NOSSOS CURSOS</h2>
+        </header>
+        <div class="cards">
+          <div class="card">
+            <img src="https://blog.fellyph.com.br/wp-content/uploads/2016/06/react-js.png" alt="logo do react em um fundo cinza escuro"/>
+    
+            <div class="card-info">
+              <h3>React</h3>
+              <p>O ReactJS é uma das bibliotecas de JavaScript mais populares para desenvolvimento de aplicativos web ou para dispositivos móveis.</p>
+            </div>
+          </div> 
+          <div class="card">
+            <img src="https://miro.medium.com/v2/resize:fit:1131/0*JH_HgIXBQvuenmUl.jpg" alt="logo do node.js em um fundo cinza escuro"/>
+    
+            <div class="card-info">
+              <h3>Node.js</h3>
+              <p> Node.js é um ambiente de execução JavaScript usado para criar aplicações escaláveis de lado do servidor (server side) e de rede.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://miro.medium.com/v2/resize:fit:1131/0*JH_HgIXBQvuenmUl.jpg" alt="logo do node.js em um fundo cinza escuro"/>
+    
+            <div class="card-info">
+              <h3>Node.js</h3>
+              <p> Node.js é um ambiente de execução JavaScript usado para criar aplicações escaláveis de lado do servidor (server side) e de rede.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://miro.medium.com/v2/resize:fit:1131/0*JH_HgIXBQvuenmUl.jpg" alt="logo do node.js em um fundo cinza escuro"/>
+    
+            <div class="card-info">
+              <h3>Node.js</h3>
+              <p> Node.js é um ambiente de execução JavaScript usado para criar aplicações escaláveis de lado do servidor (server side) e de rede.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://miro.medium.com/v2/resize:fit:1131/0*JH_HgIXBQvuenmUl.jpg" alt="logo do node.js em um fundo cinza escuro"/>
+    
+            <div class="card-info">
+              <h3>Node.js</h3>
+              <p> Node.js é um ambiente de execução JavaScript usado para criar aplicações escaláveis de lado do servidor (server side) e de rede.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://miro.medium.com/v2/resize:fit:1131/0*JH_HgIXBQvuenmUl.jpg" alt="logo do node.js em um fundo cinza escuro"/>
+    
+            <div class="card-info">
+              <h3>Node.js</h3>
+              <p> Node.js é um ambiente de execução JavaScript usado para criar aplicações escaláveis de lado do servidor (server side) e de rede.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="testimonials">
+      <div class="wrapper">
+        <header>
+          <h1>Depoimentos</h1>
+          <h2>Veja o que eles dizem sobre nós</h2>
+        </header>
+        <div class="cards">
+          <div class="card">
+            <p>Escola maravilhosa, cursos bem estruturados, professores excelentes!! Com certeza indico para todos!</p>
+
+            <div class="author">
+              <img src="https://media.istockphoto.com/id/1287459398/pt/foto/smiling-female-architect-sitting-at-her-office-desk.jpg?s=612x612&w=is&k=20&c=ielul-Y-uHHw-25YUiii2HPauK4X-R0J2_TE6eFcweg=" />
+              <p>Fernanda Rabaçal</p>
+            </div>
+          </div>
+          <div class="card">
+            <p>Escola maravilhosa, cursos bem estruturados, professores excelentes!! Com certeza indico para todos!</p>
+
+            <div class="author">
+              <img src="https://media.istockphoto.com/id/1287459398/pt/foto/smiling-female-architect-sitting-at-her-office-desk.jpg?s=612x612&w=is&k=20&c=ielul-Y-uHHw-25YUiii2HPauK4X-R0J2_TE6eFcweg=" />
+              <p>Fernanda Rabaçal</p>
+            </div>
+          </div>
+          <div class="card">
+            <p>Escola maravilhosa, cursos bem estruturados, professores excelentes!! Com certeza indico para todos!</p>
+
+            <div class="author">
+              <img src="https://media.istockphoto.com/id/1287459398/pt/foto/smiling-female-architect-sitting-at-her-office-desk.jpg?s=612x612&w=is&k=20&c=ielul-Y-uHHw-25YUiii2HPauK4X-R0J2_TE6eFcweg=" />
+              <p>Fernanda Rabaçal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="wrapper">
+        <header>
+          <h1>Contato</h1>
+          <h2>Entre em contato com a maior escola do Brasil</h2>
+        </header>
+        <div class="contact-infos">
+          <div>
+            <address>
+              <div>
+                <p>Telefone: <a href="tel:+557193839254">(71) 3324-0193</a></p>
+                <p>E-mail: <a href="mailto:dev.prog@dev.com.br">dev.prog@dev.com.br</a></p>
+              </div>
+
+              <h4>Endereço:</h4>
+              <div>
+                <p><b>UNIDADE SALVADOR:</b></p>
+                <p>Alameda Salvador, 1057, Edf. Salvador Shopping Business, Torre Europa, Sala 310</p>
+
+              </div>
+              <div>
+                <p><b>UNIDADE FORTALEZA:</b></p>
+                <p>Avenida Santos Dumont, Aldeota</p>
+
+              </div>
+              <div>
+                <p><b>UNIDADE BELO HORIZONTE:</b></p>
+                <p>ZAP: (31) 9501-9314
+                  Avenida do Contorno, 6480, Loja 01, Savassi</p>
+              </div>
+            </address>
+            <div class="social-links">
+              <a href="https://www.instagram.com/">
+                <img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" alt="Instagram" />
+              </a>
+              <a href="https://www.linkedin.com/">
+                <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" />
+              </a>
+              <a href="https://www.youtube.com/">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png" alt="Youtube" />
+              </a>
+            </div>
+          </div>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.586709412013!2d-43.94030372975283!3d-19.941813634661635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699dc3b0a592d%3A0x72478ef5ed116c38!2sInfinity%20School%20Belo%20Horizonte!5e0!3m2!1spt-BR!2sbr!4v1704762088861!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <div class="footer-links">
+          <ul>
+            <li>Termos e Privacidade</li>
+            <li>Quem somos</li>
+            <li>Política de cancelamento</li>
+            <li>Configuração de cookies</li>
+          </ul>
+          <ul>
+            <li>Trabalhe conosco</li>
+            <li>Certificados</li>
+            <li>Pagamentos</li>
+            <li>Suporte</li>
+          </ul>
+          <ul>
+            <li>Blog Dev.Prog</li>
+            <li>Cursos</li>
+            <li>Comunidade</li>
+          </ul>
+        </div>
+        
+        <p>Dev.Prog &copy; 2024. Todos os direitos reservados</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const body = document.querySelector("body")
+
+    function openMenu() {
+      body.classList.add('menu-expanded')
+    }
+
+    function closeMenu() {
+      body.classList.remove('menu-expanded')
+    }
+  </script>
+  
+</body>
+</html>
